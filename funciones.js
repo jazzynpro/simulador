@@ -23,3 +23,6 @@ function calcularInteresSimple(monto,tasa,plazoAnios){
     return interesSimple;
 }
 
+function calcularTotalPagar(monto,interesValor){
+    let valorTotalPagar=monto+interesValor+100;
+}
