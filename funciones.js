@@ -25,4 +25,11 @@ function calcularInteresSimple(monto,tasa,plazoAnios){
 
 function calcularTotalPagar(monto,interesValor){
     let valorTotalPagar=monto+interesValor+100;
+    return valorTotalPagar;
+}
+
+function calcularCuotaMensual(total,plazoAnios){
+
+    let cuotaMensual= ((total)/(plazoAnios*12));
+    return cuotaMensual;
 }

@@ -20,5 +20,10 @@ function calcular() {
 
     texto("spnInteresPagar",interesValor);
 
+    let totalPagar=calcularTotalPagar(monto,interesValor);
+    texto("spnTotalPrestamo",totalPagar);
+
+    let cuotaMensual=calcularCuotaMensual(totalPagar,plazoAnios);
+    texto("spnCuotaMensual",cuotaMensual);
 }
 
