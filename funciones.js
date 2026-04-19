@@ -17,3 +17,9 @@ function texto (id,vari){
     let texto1 = document.getElementById(id);
     texto1.innerText=vari.toFixed(2);    
 }
+
+function calcularInteresSimple(monto,tasa,plazoAnios){
+    let interesSimple = plazoAnios*monto*(tasa/100);
+    return interesSimple;
+}
+

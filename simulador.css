@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+    --verde-oscuro: #005C2B;
+    --verde-claro:  #7DC242;
+    --verde-suave:  #e8f5e9;
+    --verde-borde:  #c8e6c9;
+    --texto-muted:  #7a8f80;
+    --texto-base:   #2d2d2d;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+    font-family: 'Nunito', sans-serif;
+    background-color: #e8f5e9;
     margin: 0;
     padding: 0;
 }
@@ -8,63 +19,122 @@ body {
 .container {
     width: 400px;
     margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--verde-borde);
+    box-shadow: 0 4px 24px rgba(0, 92, 43, 0.10);
+    /* ✅ sin padding aquí, lo manejamos adentro */
 }
 
+/* ── Franja superior verde oscura para el h1 ── */
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
+    background: var(--verde-oscuro);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    padding: 22px 28px;
+    text-align: left;
+    letter-spacing: 0.3px;
 }
 
+/* ── Todo lo demás dentro del container tiene padding lateral ── */
 h2 {
-    margin-top: 20px;
-    font-size: 18px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--verde-oscuro);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 24px 28px 0;      /* ← padding lateral con margin */
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--verde-claro);
+    display: block;
 }
 
 label {
     display: block;
-    margin-top: 10px;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--verde-oscuro);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 16px 28px 6px;    /* ← separado de los bordes */
 }
 
 input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    display: block;
+    width: calc(100% - 56px);  /* 28px de cada lado */
+    margin: 0 28px;
+    padding: 12px 14px;
+    border: 1.5px solid var(--verde-borde);
+    border-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    color: var(--texto-base);
+    background: #f9fdf9;
     box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--verde-claro);
+    box-shadow: 0 0 0 3px rgba(125, 194, 66, 0.18);
+    background: #ffffff;
 }
 
 p {
-    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 28px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--verde-suave);
+    font-size: 13px;
+    color: var(--texto-muted);
 }
 
 span {
-    font-weight: bold;
-    color: #2c3e50;
+    font-weight: 700;
+    color: var(--verde-oscuro);
+    font-size: 14px;
 }
 
 .buttons {
-    margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    gap: 12px;
+    margin: 24px 28px 28px;   /* ← respeta el margen lateral */
 }
 
 button {
-    width: 48%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: white;
-    font-weight: bold;
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
     cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    border: 1.5px solid var(--verde-oscuro);
+    background: transparent;
+    color: var(--verde-oscuro);
 }
 
 button:hover {
-    background-color: #2980b9;
+    background: var(--verde-suave);
+}
+
+button.btn-primary {
+    background: var(--verde-claro);
+    border: none;
+    color: #ffffff;
+}
+
+button.btn-primary:hover {
+    background: var(--verde-oscuro);
+}
+
+button:active {
+    transform: scale(0.98);
 }

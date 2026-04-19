@@ -11,5 +11,14 @@ function calcular() {
     let capacidadDePago = calcularCapacidadDePago(disponible);
  
     texto("spnCapacidadPago", capacidadDePago);
+
+    let monto = parseFloat(document.getElementById("txtMonto").value);
+    let plazoAnios = parseFloat(document.getElementById("txtPlazo").value);
+    let tasa = parseFloat(document.getElementById("txtTasaInteres").value);
+
+    let interesValor=calcularInteresSimple(monto,tasa,plazoAnios);
+
+    texto("spnInteresPagar",interesValor);
+
 }
 
