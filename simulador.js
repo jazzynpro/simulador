@@ -32,4 +32,30 @@ function calcular() {
     else{
     document.getElementById("spnEstadoCredito").innerText= "CREDITO RECHAZADO";}
 }
+function validarNumero(idInput, idError){
+    let valor = document.getElementById(idInput).value;
+    let error = document.getElementById(idError);
+
+    // 1. Vacío
+    if(valor.trim() === ""){
+        error.innerText = "Este campo es obligatorio";
+        return;
+    }
+
+    // 2. Solo números
+    if(!/^[0-9]+$/.test(valor)){
+        error.innerText = "Solo se permiten números";
+        return;
+    }
+
+    // 3. Máximo 5 dígitos
+    if(valor.length > 5){
+        error.innerText = "Máximo 5 dígitos";
+        return;
+    }
+
+    // 4. Todo correcto
+    error.innerText = "";
+}
+
 

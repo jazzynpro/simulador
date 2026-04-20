@@ -200,3 +200,10 @@ button:active {
         font-size: 15px;
     }
 }
+.error {
+    color: red;
+    font-style: italic;
+    font-size: 11px;
+    margin: 4px 28px;
+    display: block;
+}
