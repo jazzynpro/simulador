@@ -87,14 +87,14 @@ input:focus {
 }
 
 p {
+    background: #f4fbf6;
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin: 10px 20px;
+    font-size: 13px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 10px 28px;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--verde-suave);
-    font-size: 13px;
-    color: var(--texto-muted);
+    border-left: 4px solid #7DC242;
 }
 
 span {
@@ -206,4 +206,63 @@ button:active {
     font-size: 11px;
     margin: 4px 28px;
     display: block;
+}
+#spnDisponible,
+#spnCapacidadPago {
+    color: #005C2B;
+    font-weight: bold;
+}
+#spnInteresPagar,
+#spnTotalPrestamo,
+#spnCuotaMensual {
+    color: #2e7d32;
+    font-weight: bold;
+}
+#spnEstadoCredito {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.seccion + p {
+    margin-top: 5px;
+}
+
+p + .seccion {
+    margin-top: 20px;
+}
+
+.estado-aprobado {
+    color: #2e7d32;
+}
+
+.estado-rechazado {
+    color: #d32f2f;
+}
+
+.animar {
+    animation: aparecer 0.4s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.barra {
+    height: 8px;
+    background: #e0efe5;
+    border-radius: 10px;
+    margin: 5px 20px 15px;
+    overflow: hidden;
+}
+
+#barraCapacidad {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #7DC242, #005C2B);
+    transition: width 0.4s ease;
 }

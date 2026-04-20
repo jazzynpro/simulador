@@ -27,11 +27,33 @@ function calcular() {
     texto("spnCuotaMensual",cuotaMensual);
 
     let analizarCredito=aprobarCredito(capacidadDePago,cuotaMensual);
-    if (analizarCredito){
-    document.getElementById("spnEstadoCredito").innerText= "CREDITO APROBADO";}
-    else{
-    document.getElementById("spnEstadoCredito").innerText= "CREDITO RECHAZADO";}
+
+    let estado = document.getElementById("spnEstadoCredito");
+
+if(analizarCredito){
+    estado.innerText = "CREDITO APROBADO";
+    estado.className = "estado-aprobado";
+}else{
+    estado.innerText = "CREDITO RECHAZADO";
+    estado.className = "estado-rechazado";
 }
+
+let resultados = document.querySelectorAll("p");
+
+resultados.forEach(p => {
+    p.classList.add("animar");
+
+    setTimeout(() => {
+        p.classList.remove("animar");
+    }, 400);
+});
+let porcentaje = Math.min((cuotaMensual / capacidadDePago) * 100, 100);
+
+document.getElementById("barraCapacidad").style.width = porcentaje + "%";
+}
+
+
+
 function validarNumero(idInput, idError){
     let valor = document.getElementById(idInput).value;
     let error = document.getElementById(idError);

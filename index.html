@@ -11,30 +11,46 @@
     <div class="container">
         <h1>Simulador de Crédito</h1>
  
-        <h2>Datos financieros</h2>
-        <label for="txtIngresos">Ingresos:</label>
-        <input type="text" id="txtIngresos" onblur="validarNumero('txtIngresos','errorIngresos')">
-<small id="errorIngresos" class="error"></small>
+        <div class="seccion">
+    <h2>Datos financieros</h2>
+        <div class="campo">
+    <label for="txtIngresos">Ingresos</label>
+    <input type="text" id="txtIngresos" onblur="validarNumero('txtIngresos','errorIngresos')">
+    <small id="errorIngresos" class="error"></small>
+</div>
  
-        <label for="txtEgresos">Egresos:</label>
-        <input type="text" id="txtEgresos" onblur="validarNumero('txtEgresos','errorEgresos')">
-<small id="errorEgresos" class="error"></small>
- 
+        <div class="campo">
+    <label for="txtEgresos">Egresos</label>
+    <input type="text" id="txtEgresos" onblur="validarNumero('txtEgresos','errorEgresos')">
+    <small id="errorEgresos" class="error"></small>
+</div>
+ </div>
         <p>Disponible: <span id="spnDisponible" ></span></p>
         <p>Capacidad de pago mensual: <span id="spnCapacidadPago"></span></p>
+        <div class="barra">
+    <div id="barraCapacidad"></div>
+</div>
  
-        <h2>Solicitud de crédito</h2>
-        <label for="txtMonto">Monto:</label>
-        <input type="text" id="txtMonto" onblur="validarNumero('txtMonto','errorMonto')">
-<small id="errorMonto" class="error"></small>
+        <div class="seccion">
+    <h2>Solicitud de crédito</h2>
+        <div class="campo">
+    <label for="txtMonto">Monto solicitado</label>
+    <input type="text" id="txtMonto" onblur="validarNumero('txtMonto','errorMonto')">
+    <small id="errorMonto" class="error"></small>
+</div>
  
-        <label for="txtPlazo">Plazo en años:</label>
-        <input type="text" id="txtPlazo" onblur="validarNumero('txtPlazo','errorPlazo')">
-<small id="errorPlazo" class="error"></small>
+        <div class="campo">
+    <label for="txtPlazo">Plazo en años</label>
+    <input type="text" id="txtPlazo" onblur="validarNumero('txtPlazo','errorPlazo')">
+    <small id="errorPlazo" class="error"></small>
+</div>
  
-        <label for="txtTasaInteres">Tasa de interés:</label>
-        <input type="text" id="txtTasaInteres" onblur="validarNumero('txtTasaInteres','errorTasa')">
-<small id="errorTasa" class="error"></small>
+        <div class="campo">
+    <label for="txtTasaInteres">Tasa de interés</label>
+    <input type="text" id="txtTasaInteres" onblur="validarNumero('txtTasaInteres','errorTasa')">
+    <small id="errorTasa" class="error"></small>
+</div>
+</div>
  
         <p>Interés a pagar: <span id="spnInteresPagar"></span></p>
         <p>Total préstamo: <span id="spnTotalPrestamo"></span></p>
