@@ -2,7 +2,12 @@
  
 function calcular() {
     let ingresos = parseFloat(document.getElementById("txtIngresos").value);
-    let egresos = parseFloat(document.getElementById("txtEgresos").value);
+    let arriendo = parseFloat(document.getElementById("txtArriendo").value);
+let alimentacion = parseFloat(document.getElementById("txtAlimentacion").value);
+let varios = parseFloat(document.getElementById("txtVarios").value);
+
+let egresos = arriendo + alimentacion + varios;
+texto("spnTotalGastos", egresos);
  
     let disponible = calcularDisponible(ingresos, egresos);
  

@@ -266,3 +266,13 @@ p + .seccion {
     background: linear-gradient(90deg, #7DC242, #005C2B);
     transition: width 0.4s ease;
 }
+
+
+
+.logo {
+    max-width: 350px;   /* 🔥 controla el tamaño */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
